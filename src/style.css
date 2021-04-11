@@ -11,7 +11,7 @@
 body {
   height: 100vh;
   overflow: hidden;
-  background: radial-gradient(circle at 30% 0, #060606, #030303 30%);
+  background: radial-gradient(circle at 28% 0, #090909, #030303 40%);
   font-family: AnotherDanger, sans-serif;
   position: relative;
 }
