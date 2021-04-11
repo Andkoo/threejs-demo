@@ -1,12 +1,19 @@
+@font-face {
+  font-family: 'AnotherDanger';
+  src: url('../static/fonts/AnotherDanger.otf');
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
-html,
 body {
   height: 100vh;
-  font-family: 'Poppins';
+  overflow: hidden;
+  background: radial-gradient(circle at 30% 0, #060606, #030303 30%);
+  font-family: AnotherDanger, sans-serif;
+  position: relative;
 }
 
 .webgl {
@@ -14,4 +21,45 @@ body {
   top: 0;
   left: 0;
   outline: none;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  font-size: 15vw;
+  text-transform: uppercase;
+  position: relative;
+  opacity: 0.3;
+}
+
+.heading:before,
+.heading:after {
+  content: '\E\E threejs \A test';
+  line-height: 20vw;
+  text-align: center;
+  white-space: pre;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  position: absolute;
+}
+
+.heading:before {
+  color: #111111;
+  top: 1vw;
+  left: 0.5vw;
+}
+
+.heading:after {
+  color: #1d1d1d;
+  top: 0;
+  left: 0;
 }

@@ -4,7 +4,7 @@ const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 
 module.exports = {
-  entry: path.resolve(__dirname, '../src/script.js'),
+  entry: path.resolve(__dirname, '../src/main.js'),
   output: {
     filename: 'bundle.[contenthash].js',
     path: path.resolve(__dirname, '../dist')
@@ -56,7 +56,7 @@ module.exports = {
 
       // Fonts
       {
-        test: /\.(ttf|eot|woff|woff2)$/,
+        test: /\.(ttf|otf|eot|woff|woff2)$/,
         use: [
           {
             loader: 'file-loader',
